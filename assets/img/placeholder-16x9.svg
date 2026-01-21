@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220" stop-opacity=".0"/>
+      <stop offset="1" stop-color="#0b1220" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect width="1200" height="675" fill="url(#g2)"/>
+  <g fill="#93c5fd" opacity="0.85" transform="translate(360 220) scale(3)">
+    <path d="M56 30l36 12-12 8-12-2-14 10 4 16-8 6-16-12-18 10-8-6 12-18-16-10 6-8 24 4 8-18 8 8z"/>
+  </g>
+  <text x="50%" y="78%" text-anchor="middle" font-family="Inter,Segoe UI,Arial" font-weight="800" font-size="44" fill="#e5edff">Image Unavailable</text>
+</svg>
+
