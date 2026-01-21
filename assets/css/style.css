@@ -97,6 +97,58 @@ a {
 .nav-links a:hover {
   color: var(--primary);
 }
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.nav-dropdown summary::after {
+  content: "▾";
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.nav-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+.nav-dropdown summary:hover {
+  color: var(--primary);
+}
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 210px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  box-shadow: var(--shadow);
+  display: none;
+  z-index: 20;
+}
+.nav-dropdown[open] .dropdown-menu {
+  display: grid;
+  gap: 0.35rem;
+}
+.dropdown-menu a {
+  padding: 0.4rem 0.55rem;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #0f172a;
+}
+.dropdown-menu a:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-600);
+}
 
 /* Hamburger button */
 .nav-toggle {
@@ -167,6 +219,18 @@ a {
     opacity: 0;
     visibility: hidden;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    padding: 0.35rem 0;
+    background: transparent;
+  }
+  .dropdown-menu a {
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links.active {
@@ -765,6 +829,7 @@ a {
 /* Accessibility helpers */
 .btn:focus,
 .nav-links a:focus,
+.nav-dropdown summary:focus,
 .call-pill:focus,
 .nav-toggle:focus {
   outline: 3px solid var(--ring);
