@@ -4,6 +4,7 @@
   const header = document.getElementById('site-header');
   const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.getElementById('primary-nav');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
 
   // ===== Header shadow on scroll =====
   function setHeaderShadow() {
@@ -31,6 +32,7 @@
         toggle.classList.remove('active');
         body.classList.remove('menu-open');
         toggle.setAttribute('aria-expanded', 'false');
+        dropdowns.forEach((dropdown) => dropdown.removeAttribute('open'));
       });
     });
   }
@@ -91,6 +93,7 @@
       navLinks.classList.remove('active');
       toggle.classList.remove('active');
       toggle.setAttribute('aria-expanded', 'false');
+      dropdowns.forEach((dropdown) => dropdown.removeAttribute('open'));
     }
   });
 
